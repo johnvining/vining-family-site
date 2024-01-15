@@ -11,3 +11,25 @@
 	border-width: 1px;
 	border-color: #ababab;
 }
+
+ul.letter-nav { 
+	list-style: none;
+}
+
+li.letter-nav {
+	display: inline;
+}
+
+a.letter-nav { 
+	color: blue;
+	padding: 14px;
+	text-transform: uppercase;
+	font-size: 14px;
+	text-decoration: none;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+a.letter-nav:hover { 
+	background-color: #cfe1ff;
+	border-radius: 4px;
+}
