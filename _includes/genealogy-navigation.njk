@@ -1,5 +1,13 @@
 <ul class="letter-nav">
     {%- for linkLetter in ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'] -%}
-        <li class="letter-nav"><a class="letter-nav" href="{{ linkLetter }}families.htm">{{ linkLetter}}</a></li>
+    <li class="letter-nav">
+        {%- if linkLetter == letter -%}
+        <span class="letter-nav selected">{{linkLetter}}</span>
+        {%- elseif linkLetter in ['x','y','z'] -%}
+        <span class="letter-nav disabled">{{linkLetter}}</span>
+        {%- else -%}
+        <a class="letter-nav" href="{{ linkLetter }}families.htm">{{ linkLetter}}</a>
+        {%- endif -%}   
+    </li>
     {%- endfor -%}
 </ul>
