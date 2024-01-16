@@ -1,4 +1,12 @@
 <a :name="bookmark"><span @text="name" class="top-level-name"></span></a>
-<span @text="bookmark"></span>
+    <span @text="birth ? 'b. ' + birth : ''"></span>
+    <span @text="birth ? 'd. ' + death : ''"></span>
+    <slot></slot>
 
-DEFAULT SLOT: <slot></slot>
+
+
+<script webc:type="js">
+    if(name) {
+    `NAME: ${name}`
+    }
+</script>
