@@ -9,6 +9,7 @@
         "</li>";
     }
   </script>
+  <slot name="spouses"></slot>
   <script webc:type="js">
     if (death || deathLocation) {
       `<li>d. ` +

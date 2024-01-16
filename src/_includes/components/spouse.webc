@@ -1,0 +1,12 @@
+<li>
+  m.
+  <script webc:type="js">
+    if (married || marriedLocation) {
+      married +
+        (married && marriedLocation ? "&nbsp;&nbsp;" : "") +
+        (marriedLocation ?? "") +
+        "</li>";
+    }
+  </script>
+  <span @text="name" class="top-level-name"></span>
+</li>
