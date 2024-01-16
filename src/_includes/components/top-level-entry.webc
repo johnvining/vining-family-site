@@ -1,11 +1,23 @@
 <a :name="bookmark"><span @text="name" class="top-level-name"></span></a>
-<script webc:type="js">
-  if (birth || birthLocation) {
-    `b. ` +
-      birth +
-      (birth && birthLocation ? " - " : "") +
-      (birthLocation ?? "");
-  }
-</script>
+<ul>
+  <script webc:type="js">
+    if (birth || birthLocation) {
+      `<li>b. ` +
+        birth +
+        (birth && birthLocation ? "&nbsp;&nbsp;" : "") +
+        (birthLocation ?? "") +
+        "</li>";
+    }
+  </script>
+  <script webc:type="js">
+    if (death || deathLocation) {
+      `<li>d. ` +
+        death +
+        (death && deathLocation ? "&nbsp;&nbsp;" : "") +
+        (deathLocation ?? "") +
+        "</li>";
+    }
+  </script>
+</ul>
 
 <slot></slot>
