@@ -1,12 +1,11 @@
 <a :name="bookmark"><span @text="name" class="top-level-name"></span></a>
-    <span @text="birth ? 'b. ' + birth : ''"></span>
-    <span @text="birth ? 'd. ' + death : ''"></span>
-    <slot></slot>
-
-
-
 <script webc:type="js">
-    if(name) {
-    `NAME: ${name}`
-    }
+  if (birth || birthLocation) {
+    `b. ` +
+      birth +
+      (birth && birthLocation ? " - " : "") +
+      (birthLocation ?? "");
+  }
 </script>
+
+<slot></slot>
